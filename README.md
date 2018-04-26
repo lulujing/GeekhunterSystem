@@ -14,7 +14,7 @@ Becasue I used Sqlite and EF6, it requested to install Sqlite plug-in On your co
 Visting Sqlite Website :
 http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki  
 
-Downloading sqlite-netFx46-setup-bundle-x86-2015-1.0.105.2.exe (all 32bits and 64 bits conputer can use it)
+Downloading sqlite-netFx46-setup-bundle-x86-2015-1.0.105.2.exe ( 64 bits conputer also should install x86 vision plugin)
 
 Link: http://system.data.sqlite.org/downloads/1.0.105.2/sqlite-netFx46-setup-bundle-x86-2015-1.0.105.2.exe\
 
