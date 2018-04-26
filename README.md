@@ -16,7 +16,7 @@ http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki
 
 Downloading sqlite-netFx46-setup-bundle-x86-2015-1.0.105.2.exe ( 64 bits conputer also should install x86 vision plugin)
 
-Link: http://system.data.sqlite.org/downloads/1.0.105.2/sqlite-netFx46-setup-bundle-x86-2015-1.0.105.2.exe\
+Link: http://system.data.sqlite.org/downloads/1.0.105.2/sqlite-netFx46-setup-bundle-x86-2015-1.0.105.2.exe
 
 I also putted it on my project.
 
