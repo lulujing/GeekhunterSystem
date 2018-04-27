@@ -7,6 +7,7 @@
     <h2>
         Geek Registration System
     </h2>
+    <!--dropdownlistbutton-->
     <div class="col-md-12" style="padding:10px"></div>
         <label for="id_select">Select Skill: &nbsp;</label>
         <select id="id_select" class="selectpicker bla bla bli" multiple data-live-search="true" style="width:60px" >
@@ -20,7 +21,12 @@
         <button id="btn-add-Candidate" class="btn btn-primary pull-right">Add</button>
         <hr>
     </div>
-<!--dropdownlistbutton-->
+
+ <script type="text/javascript">
+ $('.selectpicker').selectpicker({
+                'selectedText': 'cat'
+    });
+  </script>
 <div class="row" id="list">
     @Html.Action("List")
 </div>
@@ -41,12 +47,10 @@
     </div>
 </div>
 
-<script type="text/javascript">
-        $(window).on('load', function () {
-
-            $('.selectpicker').selectpicker({
-                'selectedText': 'cat'
-            });
-
-        });
-</script>
+@if (TempData["message"] != null)
+{
+    <script type="text/javascript">
+        var message = @Html.Raw(Json.Encode(TempData["message"]));
+        alert(message);
+    </script>
+}
