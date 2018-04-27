@@ -56,13 +56,36 @@ namespace CRM.Controllers
         [HttpPost]
         public ActionResult AddNewCandidate(CandidateMV candiate, int[] skills)
         {
-            var createNew = new CandidateModel()
-                                {
-                                  FirstName=candiate.FirstName,
-                                  LastName=candiate.LastName
-                                };
-            var result = crsService.CreateNewCandidate(skills, createNew);
-            return RedirectToAction("Index");
+           if (candiate.FirstName == null || candiate.LastName == null || skills.Length == 0)
+            {
+                string FailureMessage = "";
+                if (candiate.FirstName == null)
+                {
+                    FailureMessage += "FirstName is empty ! ";
+                }
+                if (candiate.FirstName == null)
+                {
+                    FailureMessage += "Lastname is empty ! ";
+                }
+                if (candiate.FirstName == null)
+                {
+                    FailureMessage += "Skill is empty ! ";
+                }
+                TempData["message"] = "failure:"+FailureMessage;
+                return RedirectToAction("Index");
+
+            }
+            else
+            {
+                var createNew = new CandidateModel()
+                {
+                    FirstName = candiate.FirstName,
+                    LastName = candiate.LastName
+                };
+                var result = crsService.CreateNewCandidate(skills, createNew);
+                TempData["message"] = "successfully added!";
+                return RedirectToAction("Index");
+            }
         }
     }
 }
